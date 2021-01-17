@@ -1,0 +1,53 @@
+/*
+color scheme
+road-sign-green = #006d54
+black = #040404
+cloudy-gray = #d1d3d3
+overcast = #bdc3c5
+asphalt = #313131
+green-gray = #6c7c79
+dark-green-gray = #424f4d
+off-white = #f5f5f5
+mid-green = #3d8978
+light-green = #83aba2
+
+*/
+
+.logo {
+  width: 100%;
+}
+h1.hero {
+  width: 100%;
+  font-size: 3em;
+}
+.hero {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+p.hero:nth-of-type(2) {
+  color: #f5f5f5;
+  border: 5px solid #006d54;
+  border-radius: 9px;
+  background-color: #424f4d;
+  margin: 0 20%;
+}
+.package {
+  text-align: center;
+  padding: 1em;
+  border: 0.1em solid #006d54;
+  background-color: #f5f5f5;
+  color: #006d54;
+  margin: 5% 10%;
+}
+div.price  {
+  color: #313131;
+  background-color: #bdc3c5;
+  font-size: 2em;
+}
+.package ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  color: #040404;
+}
