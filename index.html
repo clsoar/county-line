@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/landing.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -73,52 +74,59 @@
       </section>
     </article>
     <article class="form">
-      <form>
-        <fieldset>
-          <legend>Title</legend>
-          <label><input type="radio" name="option-one">Package One</label>
-          <label><input type="radio" name="option-one">Package Two</label>
-          <label><input type="radio" name="option-one">Package Three</label>
+      <h1>Client Form</h1>
+      <form id="form">
+        <fieldset class="radio-toolbar">
+          <legend>Select a Package</legend>
+          <input type="radio" name="option" id="option-one" value="one">
+          <label for="option-one">Package One</label>
+          <input type="radio" name="option" id="option-two" value="two">
+          <label for="option-two">Package Two</label>
+          <input type="radio" name="option" id="option-three" value="three">
+          <label for="option-three">Package Three</label>
         </fieldset>
         <div>
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" required>
+          <label for="first-name">First Name</label>
+          <input type="text" name="first-name" id="first-name" required>
+        </div>
+        <div>
+          <label for="last-name">Last Name</label>
+          <input type="text" name="last-name" id="last-name" required>
+        </div>
+        <div>
+          <label for="st-address">Address Line 1</label>
+          <input type="text" name="address" id="st-address" required>
+        </div>
+        <div>
+          <label for="apt-address">Address Line 2</label>
+          <input type="text" name="address" id="apt-address">
+        </div>
+        <div>
+          <label for="city">City</label>
+          <input type="text" name="city" id="city" required>
+        </div>
+        <div>
+          <label for="state">State</label>
+          <input type="text" name="state" id="state" required>
+        </div>
+        <div>
+          <label for="zip">Zip Code</label>
+          <input type="number" name="zip" id="zip" required>
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="number" name="phone" id="phone" required>
+        </div>
+        <div>
+          <label for="phone-two">Alternate Phone Number</label>
+          <input type="phone-two" name="phone-two" id="phone-two">
         </div>
         <div>
           <label for=""></label>
           <input type="" name="" id="" required>
         </div>
         <div>
-          <label for=""></label>
-          <input type="" name="" id="" required>
-        </div>
-        <div>
-          <label for=""></label>
-          <input type="" name="" id="" required>
-        </div>
-        <div>
-          <label for=""></label>
-          <input type="" name="" id="" required>
-        </div>
-        <div>
-          <label for=""></label>
-          <input type="" name="" id="" required>
-        </div>
-        <div>
-          <label for=""></label>
-          <input type="" name="" id="" required>
-        </div>
-        <div>
-          <label for=""></label>
-          <input type="" name="" id="" required>
-        </div>
-        <div>
-          <label for=""></label>
-          <input type="" name="" id="" required>
-        </div>
-        <div>
-          <label for=""></label>
-          <input type="" name="" id="" required>
+          <button type="submit" id="submit-form">Submit</button>
         </div>
       </form>
     </article>
