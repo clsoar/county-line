@@ -76,3 +76,10 @@ div.price  {
   background-color: #006d54;
   border-color: #bdc3c5;
 }
+
+input.name {
+  background-color: #fff;
+  color: #fff;
+  border-style: none;
+  font-size: .1px !important;
+}

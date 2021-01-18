@@ -88,8 +88,8 @@
           <input type="text" name="first-name" id="first-name" required>
         </div>
         <div>
-          <label for="last-name">Last Name</label>
-          <input type="text" name="last-name" id="last-name" required>
+          <label for="last">Last Name</label>
+          <input type="text" name="last" id="last" required>
         </div>
         <div>
           <label for="st-address">Address Line 1</label>
@@ -123,6 +123,12 @@
           <label for=""></label>
           <input type="" name="" id="" required>
         </div>
+        <!-- Extra input fields for form submission service -->
+        <input class="last-name" autocomplete="off" type="text" id="last-name" name="last-name" placeholder="last name here">
+        <input type="text" id="password" name="a_password" style="display:none !important" tabindex="-1" autocomplete="off">
+        <input aria-hidden="true" class="name" autocomplete="off" type="text" id="name" name="winnitrap" value="Enter Roboname">
+        <!-- End extra fields -->
+
         <div>
           <button type="submit" id="submit-form">Submit</button>
         </div>
