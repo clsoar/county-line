@@ -83,52 +83,66 @@
           <input type="radio" name="option" id="option-three" value="three">
           <label for="option-three">Package Three</label>
         </fieldset>
-        <div>
+        <div class="form-input">
           <label for="first-name">First Name</label>
           <input type="text" name="first-name" id="first-name" required>
         </div>
-        <div>
+        <div class="form-input">
           <label for="last">Last Name</label>
           <input type="text" name="last" id="last" required>
         </div>
-        <div>
+        <div class="form-input">
           <label for="st-address">Address Line 1</label>
           <input type="text" name="st-address" id="st-address" required>
         </div>
-        <div>
+        <div class="form-input">
           <label for="apt-address">Address Line 2</label>
           <input type="text" name="apt-address" id="apt-address">
         </div>
-        <div>
+        <div class="form-input">
           <label for="city">City</label>
           <input type="text" name="city" id="city" required>
         </div>
-        <div>
+        <div class="form-input">
           <label for="state">State</label>
           <input type="text" name="state" id="state" required>
         </div>
-        <div>
+        <div class="form-input">
           <label for="zip">Zip Code</label>
-          <input type="number" name="zip" id="zip" required>
+          <input type="tel" name="zip" id="zip" required>
         </div>
-        <div>
+        <div class="form-input">
           <label for="phone">Phone Number</label>
-          <input type="number" name="phone" id="phone" required>
+          <input type="tel" name="phone" id="phone" required>
         </div>
-        <div>
-          <label for="phone-two">Alternate Phone Number</label>
+        <div class="form-input">
+          <label for="phone-two">Alt Phone Number</label>
           <input type="phone-two" name="phone-two" id="phone-two">
         </div>
-        <div>
-          <label for=""></label>
-          <input type="" name="" id="" required>
+        <div class="form-input">
+          <label for="email">Email Address</label>
+          <input type="email" name="email" id="email" required>
         </div>
         <!-- Extra input fields for form submission service -->
         <input class="last-name" autocomplete="off" type="text" id="last-name" name="last-name" placeholder="last name here">
         <input type="text" id="password" name="a_password" style="display:none !important" tabindex="-1" autocomplete="off">
         <input aria-hidden="true" class="name" autocomplete="off" type="text" id="name" name="winnitrap" value="Enter Roboname">
         <!-- End extra fields -->
-
+        <div class="location">
+          <p>To optimize construction of the fiber optic lines, we will need the most specific location of where the lines will start on your property that we can get. Search for and place your location by clicking below.</p>
+          <button type="button" name="geolocation">Get Your Location</button>
+          <fieldset>
+            <legend>Enter your specific location</legend>
+            <label for="lat">Latitude</label>
+            <input type="text" name="lat" id="lat">
+            <label for="long">Longitude</label>
+            <input type="text" name="long" id="long">
+          </fieldset>
+        </div>
+        <div class="form-input">
+          <label for="comments">Comments or Questions</label>
+          <input type="text" name="comments" id="comments" required>
+        </div>
         <div>
           <button type="submit" id="submit-form">Submit</button>
         </div>
