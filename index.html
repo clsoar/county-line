@@ -71,11 +71,11 @@
         </ul>
       </section>
     </article>
-    <article class="form">
+    <article class="form-art">
       <h1>Client Form</h1>
-      <form id="form">
+      <form class="form">
         <fieldset class="radio-toolbar">
-          <legend>Select a Package</legend>
+          <legend>Select a Package *</legend>
           <input type="radio" name="option" id="option-one" value="one" required>
           <label for="option-one">Package One</label>
           <input type="radio" name="option" id="option-two" value="two">
@@ -84,15 +84,15 @@
           <label for="option-three">Package Three</label>
         </fieldset>
         <div class="form-input">
-          <label for="first-name">First Name</label>
+          <label for="first-name">First Name *</label>
           <input type="text" name="first-name" id="first-name" required>
         </div>
         <div class="form-input">
-          <label for="last">Last Name</label>
+          <label for="last">Last Name *</label>
           <input type="text" name="last" id="last" required>
         </div>
         <div class="form-input">
-          <label for="st-address">Address Line 1</label>
+          <label for="st-address">Address Line 1 *</label>
           <input type="text" name="st-address" id="st-address" required>
         </div>
         <div class="form-input">
@@ -100,19 +100,19 @@
           <input type="text" name="apt-address" id="apt-address">
         </div>
         <div class="form-input">
-          <label for="city">City</label>
+          <label for="city">City *</label>
           <input type="text" name="city" id="city" required>
         </div>
         <div class="form-input">
-          <label for="state">State</label>
+          <label for="state">State *</label>
           <input type="text" name="state" id="state" required>
         </div>
         <div class="form-input">
-          <label for="zip">Zip Code</label>
+          <label for="zip">Zip Code *</label>
           <input type="tel" name="zip" id="zip" required>
         </div>
         <div class="form-input">
-          <label for="phone">Phone Number</label>
+          <label for="phone">Phone Number *</label>
           <input type="tel" name="phone" id="phone" required>
         </div>
         <div class="form-input">
@@ -120,22 +120,17 @@
           <input type="phone-two" name="phone-two" id="phone-two">
         </div>
         <div class="form-input">
-          <label for="email">Email Address</label>
+          <label for="email">Email Address *</label>
           <input type="email" name="email" id="email" required>
         </div>
-        <!-- Extra input fields for form submission service -->
-        <input class="last-name" autocomplete="off" type="text" id="last-name" name="last-name" placeholder="last name here">
-        <input type="text" id="password" name="a_password" style="display:none !important" tabindex="-1" autocomplete="off">
-        <input aria-hidden="true" class="name" autocomplete="off" type="text" id="name" name="winnitrap" value="Enter Roboname">
-        <!-- End extra fields -->
         <div class="location">
           <p>To optimize construction of the fiber optic lines, we will need the most specific location of where the lines will start on your property that we can get. Search for and place your location by clicking below.</p>
           <button type="button" name="geolocation">Get Your Location</button>
           <fieldset>
             <legend>Enter your specific location</legend>
-            <label for="lat">Latitude</label>
+            <label for="lat">Latitude *</label>
             <input type="text" name="lat" id="lat">
-            <label for="long">Longitude</label>
+            <label for="long">Longitude *</label>
             <input type="text" name="long" id="long">
           </fieldset>
         </div>
@@ -143,7 +138,13 @@
           <label for="comments">Comments or Questions</label>
           <textarea id="comments" name="comments" rows="4" cols="25"></textarea>
         </div>
-        <div>
+        <!-- Extra input fields for form submission service -->
+        <input class="last-name" autocomplete="off" type="text" id="last-name" name="last-name" placeholder="last name here">
+        <input type="text" id="password" name="a_password" style="display:none !important" tabindex="-1" autocomplete="off">
+        <input aria-hidden="true" class="name" autocomplete="off" type="text" id="name" name="winnitrap" value="Enter Roboname">
+        <!-- End extra fields -->
+
+        <div class="submit-btn">
           <button type="submit" id="submit-form">Submit</button>
         </div>
       </form>
