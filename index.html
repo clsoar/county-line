@@ -34,50 +34,52 @@
       <li><a href="#sign-up">Sign Up</a></li>
     </ul>
   </nav>
-  <h1 class="hero">Fiber Optic Internet</h1>
+  <p class="hero collab">In collaboration with LAW Wireless</p>
   <p class="hero">Coming soon to your area.</p>
-  <p class="hero">Sign up now for pre-construction discounts.</p>
+  <ul>
+    <li>Business Packages available</li>
+    <li>Unlimited Data, no caps, no throttling</li>
+    <li>Low Latency</li>
+    <li>Work From Home</li>
+    <li>Virtual Classroom</li>
+    <li>Streaming</li>
+    <li>Gaming</li>
+    <li>Security, Automation, and IoT</li>
+  </ul>
+  <p class="hero">Register your interest for one of our packages below. <br>We will contact you later to lock in your pre-construction discount.</p>
   <main>
     <article class="packages">
       <section class="option-one package">
         <h1>Package One</h1>
-        <div class="price">Price</div>
-        <div class="price">Discount Price</div>
+        <div class="price">$99/mo</div>
         <ul>
-          <li>200 Mbps</li>
-          <li>Basic Equipment</li>
-          <li>Distinguishing detail</li>
-          <li>Distinguishing detail</li>
-          <li>Distinguishing detail</li>
+          <li>250 Mbps</li>
         </ul>
       </section>
       <section class="option-two package">
         <h1>Package Two</h1>
-        <div class="price">Price</div>
-        <div class="price">Discount Price</div>
+        <div class="price">$124/mo</div>
         <ul>
-          <li>400 Mbps</li>
-          <li>Upgraded Equipment</li>
-          <li>Distinguishing detail</li>
-          <li>Distinguishing detail</li>
-          <li>Distinguishing detail</li>
+          <li>500 Mbps</li>
         </ul>
       </section>
       <section class="option-three package">
         <h1>Package Three</h1>
-        <div class="price">Price</div>
-        <div class="price">Discount Price</div>
+        <div class="price">$149/mo</div>
         <ul>
+          <li>1000 Mbps</li>
           <li>Gigabit Connection</li>
-          <li>Premium Equipment</li>
-          <li>Distinguishing detail</li>
-          <li>Distinguishing detail</li>
-          <li>Distinguishing detail</li>
         </ul>
       </section>
     </article>
+    <section class="install-fee">
+      <p>Installation fees start at $499.*</p>
+      <p>Pre-Consruction Installation Fee $399*. Save $100 by completing a pre-construction contract, available until construction breaks ground.</p>
+      <p>Equipment Lease and insurance fees are $13/month, this covers X, Y, Z hapenstances.</p>
+      <p>Equipment may instead be purchased for $149.</p>
+      <p>*Installations that are over 200 feet from county Right-of-Way may incur additional fees.</p>
+    </section>
     <h2><a id="sign-up">Check for Service and Sign Up</a></h2>
-    <h3>Enter the plan you would like in the last field.</h3>
     <article class="form-art">
       <h1>Client Form</h1>
       <form class="form">
@@ -89,18 +91,20 @@
           <label for="option-two">Package Two</label>
           <input type="radio" name="option" id="option-three" value="three">
           <label for="option-three">Package Three</label>
+          <input type="radio" name="option" id="option-business" value="business">
+          <label for="option-business">Business Package</label>
         </fieldset>
         <div class="form-input">
           <label for="first-name">First Name *</label>
-          <input type="text" name="first-name" id="first-name" required>
+          <input type="text" name="first-name" id="first-name" value="test" required>
         </div>
         <div class="form-input">
           <label for="last">Last Name *</label>
-          <input type="text" name="last" id="last" required>
+          <input type="text" name="last" id="last" value="case" required>
         </div>
         <div class="form-input">
           <label for="st-address">Address Line 1 *</label>
-          <input type="text" name="st-address" id="st-address" required>
+          <input type="text" name="st-address" id="st-address" value="123 test" required>
         </div>
         <div class="form-input">
           <label for="apt-address">Address Line 2</label>
@@ -108,19 +112,19 @@
         </div>
         <div class="form-input">
           <label for="city">City *</label>
-          <input type="text" name="city" id="city" required>
+          <input type="text" name="city" id="city" value="test" required>
         </div>
         <div class="form-input">
           <label for="state">State *</label>
-          <input type="text" name="state" id="state" required>
+          <input type="text" name="state" id="state" value="TX" required>
         </div>
         <div class="form-input">
           <label for="zip">Zip Code *</label>
-          <input type="tel" name="zip" id="zip" required>
+          <input type="tel" name="zip" id="zip" value="12345" required>
         </div>
         <div class="form-input">
           <label for="phone">Phone Number *</label>
-          <input type="tel" name="phone" id="phone" required>
+          <input type="tel" name="phone" id="phone"value="5555555555" required>
         </div>
         <div class="form-input">
           <label for="phone-two">Alt Phone Number</label>
@@ -128,7 +132,7 @@
         </div>
         <div class="form-input">
           <label for="email">Email Address *</label>
-          <input type="email" name="email" id="email" required>
+          <input type="email" name="email" id="email" value="test@tester.com" required>
         </div>
         <div class="location">
           <p>To optimize construction of the fiber optic lines, we will need the most specific location of where the service will be used on your property that we can get. Search for and place your service location by clicking below.</p>
@@ -136,9 +140,9 @@
           <fieldset>
             <legend>Enter your specific location</legend>
             <label for="lat">Latitude *</label>
-            <input type="text" name="lat" id="lat">
+            <input type="text" name="lat" id="lat" value="1234" required>
             <label for="long">Longitude *</label>
-            <input type="text" name="long" id="long">
+            <input type="text" name="long" id="long" value="1234" required>
           </fieldset>
         </div>
         <div class="form-input">
