@@ -27,16 +27,16 @@ function initAccordion(accordionElem){
 
   //Hide old panel and show new One
   function showPanel(panel){
-    //Hide old one.
+    //close old ones open clicked one.
      let expandedPanel = accordionElem.querySelector(".active");
-     if (expandedPanel){
-         expandedPanel.classList.remove("active");
-      //check if clicked on is open, and if so, close
-     }else if (panel.classList.contains("active")) {
-       panel.classList.remove("active");
-      //open clicked panel if not open
-     }else {
-       panel.classList.toggle("active");
+     if (expandedPanel && panel.classList.contains("active")){
+       expandedPanel.classList.remove("active");
+       panel.classList.remove('active');
+    }else if (expandedPanel && !panel.classList.contains("active")){
+       panel.classList.add("active");
+       expandedPanel.classList.remove("active");
+     }else if (!expandedPanel && !panel.classList.contains('active')){
+       panel.classList.add("active");
      }
   }
   var allPanelElems = accordionElem.querySelectorAll(".qa-container");
