@@ -76,14 +76,14 @@ header h1 {
   color: #006d54;
   margin: 3% 5%;
 }
-.question {
-  border-bottom: 0.1em solid #006d54;
-}
 .faq-container .answer-container {
   display: none;
 }
 .faq-container .active .answer-container {
   display: block;
+}
+.faq-container .active .question {
+  border-bottom: 0.1em solid #006d54;
 }
 
 @media screen and (min-width: 800px) {
@@ -106,7 +106,4 @@ header h1 {
   h1 {
     font-size: 2.4em;
   }
-  div.price {
-    font-size: 2.4em;
-  }
-)
+}
