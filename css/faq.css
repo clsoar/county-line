@@ -55,7 +55,7 @@ light-green = #83aba2
 }
 header h1 {
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 2.5%;
   margin-top: 2.5%;
   text-align: center;
   margin-left: auto;
@@ -79,3 +79,34 @@ header h1 {
 .question {
   border-bottom: 0.1em solid #006d54;
 }
+.faq-container .answer-container {
+  display: none;
+}
+.faq-container .active .answer-container {
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  .logo {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 1700px) {
+  body {
+    font-size: 1.4em;
+  }
+  h1 {
+    font-size: 2.4em;
+  }
+  div.price {
+    font-size: 2.4em;
+  }
+)
