@@ -51,7 +51,7 @@ h1.hero {
 }
 .collab {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
 p.hero:nth-of-type(2) {
   color: #040404;
@@ -111,13 +111,6 @@ h3 {
   text-align: center;
   padding: 0 5px;
 }
-.towercoverage {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
 .form-art {
   text-align: left;
   width: 90%;
