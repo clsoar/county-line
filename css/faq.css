@@ -53,6 +53,12 @@ light-green = #83aba2
   display: inline;
   padding: 2%;
 }
+.menu a {
+  text-decoration: none;
+  padding: 2%;
+  background-color: #bdc3c5;
+  color: #040404;
+}
 header h1 {
   width: 100%;
   margin-bottom: 2.5%;

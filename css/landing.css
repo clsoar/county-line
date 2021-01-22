@@ -27,11 +27,17 @@ light-green = #83aba2
   margin-right: auto;
   padding-left: 0;
   width: 100%;
-
 }
 .menu li {
   display: inline;
   padding: 2%;
+
+}
+.menu a {
+  text-decoration: none;
+  padding: 2%;
+  background-color: #bdc3c5;
+  color: #040404;
 }
 h1.hero {
   width: 100%;
