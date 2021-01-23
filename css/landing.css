@@ -57,18 +57,42 @@ p.hero:nth-of-type(2) {
   color: #040404;
   border: .2em solid #bdc3c5;
   border-radius: .2em;
-  background-color: #83aba2;
+  background-color: #f5f5f5;
   margin: 0 10% 30px 10%;
 }
 .features {
-  list-style-type: square;
-  margin: 1% 5% 3% 5%;
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 2%;
+  font-size: 1.1em;
+  text-shadow: 2px 1px 1px #bdc3c5;
+}
+ul.features {
+  margin-left: 0;
+  padding-left: 0;
+}
+.features li {
+  /*background-color: #424f4d;
+  border-radius: 15px;
+  box-shadow: -10px -6px 3px #006d54, -5px -6px #424f4d;
+  color: #f5f5f5;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: -5px -6px 4px #424f4d, -10px -6px 10px #d1d3d3, 2px 2px 2px #424f4d;
+  color: black;
+  max-width: 650px;
+  padding: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;*/
 }
 p.hero:nth-of-type(3) {
-  color: #f5f5f5;
   border: 5px solid #006d54;
   border-radius: 9px;
-  background-color: #424f4d;
+  background-color: #f5f5f5;
   margin: 2% 10%;
 }
 p.hero:nth-of-type(4) {
@@ -193,11 +217,6 @@ button {
 
 /*for larger screens*/
 @media screen and (min-width: 400px) {
-  .features-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .form-input {
     margin-left: auto;
     margin-right: auto;
@@ -209,7 +228,6 @@ button {
 }
 
 @media screen and (min-width: 700px) {
-
   .form-input {
     display: inline-block;
     margin: 2px 5px;
@@ -265,6 +283,9 @@ button {
   body {
     font-size: 1.2em;
   }
+  .features {
+    font-size: 1.4em;
+  }
 
   .logo {
     grid-area: topL;
@@ -285,6 +306,9 @@ button {
   }
   h1 {
     font-size: 2.4em;
+  }
+  .features {
+    font-size: 1.6em;
   }
   div.price {
     font-size: 2.4em;
