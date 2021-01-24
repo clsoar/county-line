@@ -36,4 +36,17 @@ if(formSubmitBtn) {
     }
   }
 //for dialog
-const closeBtn = document.querySelector('#close-btn');
+const closeBtn = document.querySelector('#close-button');
+const newLat = document.querySelector('#lat');
+const newLong = document.querySelector('#long');
+const transferLocation = () => {
+  //transfer lat longs to form
+    let thisLat = document.querySelector('#testLat').value;
+    let thisLong = document.querySelector('#testLong').value;
+    newLat.value = thisLat;
+    newLong.value = thisLong;
+  
+  console.log('this might work');
+//  newLat.value = lat;
+//  newLong.value = long;
+};
