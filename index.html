@@ -158,7 +158,7 @@
         </div>
         <div class="location">
           <p>To optimize construction of the fiber optic lines, we will need the most specific location of where the service will be used on your property that we can get. Search for and place your service location by clicking below.</p>
-          <button type="button" name="geolocation">Get Your Location</button>
+          <button onclick="dialog.showModal()" type="button" name="geolocation">Get Your Location</button>
           <fieldset>
             <legend>Enter your specific location</legend>
             <label for="lat">Latitude *</label>
@@ -184,8 +184,12 @@
       </form>
     </article>
   </main>
-
-
+  <dialog id="dialog">
+    <p>Map goes here</p>
+    <form class="close" method="dialog">
+      <button id="close-button">Close</button>
+    </form>
+  </dialog>
   <!--JS files here -->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>

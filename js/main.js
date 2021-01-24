@@ -35,3 +35,5 @@ if(formSubmitBtn) {
 
     }
   }
+//for dialog
+const closeBtn = document.querySelector('#close-btn');
