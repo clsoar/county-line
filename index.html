@@ -17,7 +17,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link rel="stylesheet" href="css/dialog-polyfill.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/landing.css">
@@ -187,12 +187,19 @@
   <dialog id="dialog">
     <p>Map goes here</p>
     <form class="close" method="dialog">
-      <input id="testLat" type="text" name="testLat">
-      <input id="testLong" type="text" name="testLong">
+      <input id="testLat" type="text" name="testLat" placeholder="for testing">
+      <input id="testLong" type="text" name="testLong" placeholder="for testing">
       <button id="close-button" onclick="transferLocation()">Close</button>
     </form>
   </dialog>
   <!--JS files here -->
+  <script src="js/dialog-polyfill.js"></script>
+  <script>
+    var dialog = document.querySelector('dialog');
+    dialogPolyfill.registerDialog(dialog);
+    // Now dialog always acts like a native <dialog>.
+    //dialog.showModal();
+  </script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
