@@ -39,26 +39,44 @@ if(formSubmitBtn) {
 const closeBtn = document.querySelector('#close-button');
 const newLat = document.querySelector('#lat');
 const newLong = document.querySelector('#long');
-const transferLocation = () => {
-  //transfer lat longs to form
-    let thisLat = document.querySelector('#testLat').value;
-    let thisLong = document.querySelector('#testLong').value;
-    newLat.value = thisLat;
-    newLong.value = thisLong;
+const transferLocation = (marker) => {
+  var droppedLat = marker.getPosition().lat();
+  var droppedLong = marker.getPosition().lng();
+  console.log(droppedLat, droppedLong);
+  newLat.value = droppedLat;
+  newLong.value = droppedLong;
+}
 
-  console.log('this might work');
-//  newLat.value = lat;
-//  newLong.value = long;
-};
 //for map
 const yeksOne = "AIzaSyCnWKdGq2iKrYT";
 const yeksTwo = "atd3QqciKceSiyKpU294";
 
+//listen for open dialog button
+const makeMap = () => {
+      var script = document.createElement('script');
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=' + yeksOne + yeksTwo+ '&libraries=geometry,places' + '&callback=initMap';
+      script.defer = true;
+
+      // Append the 'script' element to 'head'
+      document.head.appendChild(script);
+      locationBtn.removeEventListener('click', console.log('done'));
+}
+const locationBtn = document.querySelector('#geolocation');
+if(locationBtn){
+  locationBtn.addEventListener('click', makeMap, {once: true});
+}
+
+
+
+
+
+
 //script element create
-var script = document.createElement('script');
-script.src = 'https://maps.googleapis.com/maps/api/js?key=' + yeksOne + yeksTwo+ '&libraries=geometry,places' + '&callback=initMap';
-script.defer = true;
+//var script = document.createElement('script');
+//script.src = 'https://maps.googleapis.com/maps/api/js?key=' + yeksOne + yeksTwo+ '&libraries=geometry,places' + '&callback=initMap';
+//script.defer = true;
 //get lat long from Address
+
 let stAdd = document.querySelector('#st-address').value;
 let city = document.querySelector('#city').value;
 let state = document.querySelector('#state').value;
@@ -68,7 +86,7 @@ let address = (stAdd + ' ' + city + ', ' + state + ' ' + zip);
 var geocoder, map;
 window.initMap = function() {
  var geocoder1 = new google.maps.Geocoder();
- setCenter(geocoder1, 'Willis, TX');
+ setCenter(geocoder1, address);
 }
 function setCenter(geocoder, address) {
     geocoder.geocode({
@@ -83,42 +101,22 @@ function setCenter(geocoder, address) {
           });
             var marker = new google.maps.Marker({
                 map: map,
-                position: results[0].geometry.location
+                position: results[0].geometry.location,
+                draggable: true,
+                optimized: true
             });
+            let calcLat = marker.getPosition().lat();
+            let calcLong = marker.getPosition().lng();
+            console.log(calcLat, calcLong, 'calculated');
+            newLat.value = calcLat;
+            newLong.value = calcLong;
+            google.maps.event.addListener(marker, 'dragend', function(event) {
+              transferLocation(marker);
+              return(marker);
+            });
+
         }else {
           console.log(status);
         }
     });
 }
-
-//attach callback function to window
-/*window.initMap = function() {
-  // JS API is loaded and available
-  let geocoder = new google.maps.Geocoder();
-  geocoder.geocode ({
-    'address': address},
-    function(results, status) {
-      if (status === google.maps.GeocoderStatus.OK) {
-        let latLngs = results[0].geometry.location;
-        let LL = latLngs.toString();
-        let tst = LL.substring(1, LL.length - 1);
-        let coordinates = tst.split(',');
-        var latForMap = coordinates[0];
-        var longForMap = coordinates[1];
-        return (latForMap, longForMap);
-        console.log(latForMap, longForMap);
-      }
-      return (latForMap, longForMap);
-
-    });
-
-  let map = (latForMap, longForMap) => {new google.maps.Map(document.getElementById('map'), {
-    center: {lat: latForMap, lng: longForMap},
-    zoom: 10,
-    mapTypeId: google.maps.MapTypeId.SATELLITE
-
-  });
-};
-}*/
-// Append the 'script' element to 'head'
-document.head.appendChild(script);
