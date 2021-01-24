@@ -65,8 +65,34 @@ let state = document.querySelector('#state').value;
 let zip = document.querySelector('#zip').value;
 let address = (stAdd + ' ' + city + ', ' + state + ' ' + zip);
 
-//attach callback function to window
+var geocoder, map;
 window.initMap = function() {
+ var geocoder1 = new google.maps.Geocoder();
+ setCenter(geocoder1, 'Willis, TX');
+}
+function setCenter(geocoder, address) {
+    geocoder.geocode({
+        'address': address
+    }, function(results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+          let map = new google.maps.Map(document.getElementById('map'), {
+            center: results[0].geometry.location,
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+
+          });
+            var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+            });
+        }else {
+          console.log(status);
+        }
+    });
+}
+
+//attach callback function to window
+/*window.initMap = function() {
   // JS API is loaded and available
   let geocoder = new google.maps.Geocoder();
   geocoder.geocode ({
@@ -74,12 +100,13 @@ window.initMap = function() {
     function(results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
         let latLngs = results[0].geometry.location;
-        let LL = latlngs.toString();
+        let LL = latLngs.toString();
         let tst = LL.substring(1, LL.length - 1);
         let coordinates = tst.split(',');
         var latForMap = coordinates[0];
         var longForMap = coordinates[1];
         return (latForMap, longForMap);
+        console.log(latForMap, longForMap);
       }
       return (latForMap, longForMap);
 
@@ -87,9 +114,11 @@ window.initMap = function() {
 
   let map = (latForMap, longForMap) => {new google.maps.Map(document.getElementById('map'), {
     center: {lat: latForMap, lng: longForMap},
-    zoom: 10
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+
   });
 };
-}
+}*/
 // Append the 'script' element to 'head'
 document.head.appendChild(script);
