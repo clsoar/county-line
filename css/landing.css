@@ -238,6 +238,11 @@ dialog::backdrop {
 dialog + .backdrop { /*pollyfill*/
   backdrop-filter: blur(3px);
 }
+/*map styling*/
+#map {
+  height:  90vh;
+  width: 90%;
+}
 
 /*for larger screens*/
 @media screen and (min-width: 400px) {
