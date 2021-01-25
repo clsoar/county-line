@@ -95,7 +95,7 @@ function setCenter(geocoder, address) {
         if (status === google.maps.GeocoderStatus.OK) {
           let map = new google.maps.Map(document.getElementById('map'), {
             center: results[0].geometry.location,
-            zoom: 17,
+            zoom: 18,
             mapTypeId: google.maps.MapTypeId.SATELLITE
 
           });
