@@ -51,6 +51,10 @@ const transferLocation = (marker) => {
 const yeksOne = "AIzaSyCnWKdGq2iKrYT";
 const yeksTwo = "atd3QqciKceSiyKpU294";
 
+const reCenterMap = () => {
+  var geocoder1 = new google.maps.Geocoder();
+  setCenter(geocoder1);
+}
 //listen for open dialog button
 const makeMap = () => {
       var script = document.createElement('script');
@@ -60,6 +64,7 @@ const makeMap = () => {
       // Append the 'script' element to 'head'
       document.head.appendChild(script);
       locationBtn.removeEventListener('click', console.log('done'));
+      locationBtn.addEventListener('click', reCenterMap);
 }
 const locationBtn = document.querySelector('#geolocation');
 if(locationBtn){
@@ -81,15 +86,16 @@ if(locationBtn){
 var geocoder, map;
 window.initMap = function() {
  var geocoder1 = new google.maps.Geocoder();
- let stAdd = document.querySelector('#st-address').value;
- let city = document.querySelector('#city').value;
- let state = document.querySelector('#state').value;
- let zip = document.querySelector('#zip').value;
- let address = (stAdd + ' ' + city + ', ' + state + ' ' + zip);
 
- setCenter(geocoder1, address);
+ setCenter(geocoder1);
 }
-function setCenter(geocoder, address) {
+function setCenter(geocoder) {
+  let stAdd = document.querySelector('#st-address').value;
+  let city = document.querySelector('#city').value;
+  let state = document.querySelector('#state').value;
+  let zip = document.querySelector('#zip').value;
+  let address = (stAdd + ' ' + city + ', ' + state + ' ' + zip);
+
     geocoder.geocode({
         'address': address
     }, function(results, status) {
