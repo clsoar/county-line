@@ -248,7 +248,7 @@ dialog + .backdrop { /*pollyfill*/
 }
 /*map styling*/
 #map {
-  height: 87vh;
+  height: 95%;
   width: 100%;
 }
 
