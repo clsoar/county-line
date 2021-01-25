@@ -61,10 +61,10 @@ const makeMap = () => {
       document.head.appendChild(script);
       locationBtn.removeEventListener('click', console.log('done'));
 }
-/*const locationBtn = document.querySelector('#geolocation');
+const locationBtn = document.querySelector('#geolocation');
 if(locationBtn){
   locationBtn.addEventListener('click', makeMap, {once: true});
-}*/
+}
 
 
 
