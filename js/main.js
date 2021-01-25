@@ -77,15 +77,16 @@ if(locationBtn){
 //script.defer = true;
 //get lat long from Address
 
-let stAdd = document.querySelector('#st-address').value;
-let city = document.querySelector('#city').value;
-let state = document.querySelector('#state').value;
-let zip = document.querySelector('#zip').value;
-let address = (stAdd + ' ' + city + ', ' + state + ' ' + zip);
 
 var geocoder, map;
 window.initMap = function() {
  var geocoder1 = new google.maps.Geocoder();
+ let stAdd = document.querySelector('#st-address').value;
+ let city = document.querySelector('#city').value;
+ let state = document.querySelector('#state').value;
+ let zip = document.querySelector('#zip').value;
+ let address = (stAdd + ' ' + city + ', ' + state + ' ' + zip);
+
  setCenter(geocoder1, address);
 }
 function setCenter(geocoder, address) {
