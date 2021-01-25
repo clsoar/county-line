@@ -241,6 +241,13 @@ dialog {
     transform: translate(0, -50%);
   }
 }
+@supports (max-height: -webkit-fill-available) {
+  dialog {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+}
 dialog::backdrop {
   backdrop-filter: blur(3px);
 }
