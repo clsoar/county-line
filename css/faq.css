@@ -37,10 +37,29 @@ light-green = #83aba2
 .logo {
   width: 100%;
 }
+.header-text {
+  display: none;
+}
+.law-logo {
+  width: 20%;
+  max-width: 100px;
+}
+.collab-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.collab {
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+}
 .menu {
   display: flex;
   flex-wrap: nowrap;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .menu ul {
   list-style-type: none;
@@ -59,7 +78,7 @@ light-green = #83aba2
   background-color: #bdc3c5;
   color: #040404;
 }
-header h1 {
+main h1 {
   width: 100%;
   margin-bottom: 2.5%;
   margin-top: 2.5%;
@@ -99,6 +118,35 @@ header h1 {
     text-align: center;
     display: block;
   }
+}
+@media screen and (min-width: 1000px) {
+  header {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 9px 0;
+  }
+  .logo {
+    width: 30%;
+  }
+  .header-text {
+    display: block;
+    text-align: center;
+    width: 33%;
+    font-size: 2.3em;
+  }
+  .collab-container {
+    width: 33%;
+    position: relative;
+    right: 45px;
+  }
+  .law-logo {
+    width: 100%;
+  }
+  .menu {
+    margin-bottom: 20px;
+  }
+
 }
 @media screen and (min-width: 1200px) {
   body {
