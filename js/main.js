@@ -1,5 +1,5 @@
 //https://script.google.com/macros/s/AKfycbwRSCpXWL9Id8ihsyBDU5xQQQAVmAW9pZ5G-gy-8iXYsiOXh2hV/exec
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwRSCpXWL9Id8ihsyBDU5xQQQAVmAW9pZ5G-gy-8iXYsiOXh2hV/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwz37W3f4mNtO0ZIegUfQ64-u7GGzjBV1KtNZjrYbYf_IdGRhMA1MRo/exec';
 const form = document.forms['clientForm'];
 const formSubmitBtn = document.querySelector("#submit-form");
 
@@ -7,7 +7,6 @@ const formSubmitBtn = document.querySelector("#submit-form");
 const extra = document.querySelector("#last-name");
 const extra2 = document.querySelector("#name");
 const extra3 = document.querySelector("#password");
-
 
 if(formSubmitBtn) {
 
