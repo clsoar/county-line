@@ -1,22 +1,10 @@
+
+header.thanks {
+  display: block;
+  text-align: center;
+}
 .thanks-message {
   padding: 2% 5%;
-}
-.header-text {
-  display: none;
-}
-.law-logo {
-  width: 20%;
-  max-width: 100px;
-}
-.collab-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.collab {
-  width: 100%;
-  margin-bottom: 0;
-  text-align: center;
 }
 .menu {
   display: flex;
@@ -32,33 +20,15 @@
   }
 }
 @media screen and (min-width: 1000px) {
-  header {
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 9px 0;
-  }
+
   .logo {
-    width: 30%;
-  }
-  .header-text {
-    display: block;
-    text-align: center;
-    width: 33%;
-    font-size: 2.3em;
-  }
-  .collab-container {
-    width: 33%;
-    position: relative;
-    right: 45px;
-  }
-  .law-logo {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
+
   .menu {
     margin-bottom: 20px;
   }
-  h1.hero {
-    display: none;
-  }
+
 }
