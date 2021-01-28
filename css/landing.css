@@ -81,14 +81,19 @@ p.hero:nth-of-type(2) {
   font-weight: bold;
   text-align: center;
   padding-bottom: 2%;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 ul.features {
   margin-left: 0;
   padding-left: 0;
+  color: #f4f4f4;
+  text-shadow: 2px 0 2px black, 0 2px 2px black, -2px 0 2px black, 0 -2px 2px black;
+  background: url(../img/fiber-line.png) #d1d3d3;
+  background-size: cover;
 }
 .features li {
-  background-color: #424f4d;
+  padding: 2px;
+  /*background-color: #424f4d;
   border-radius: 10px;
   box-shadow:  -5px -3px 1px #006d54;
   color: #f5f5f5;
@@ -97,7 +102,8 @@ ul.features {
   padding: 2px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 10px;*/
+
 }
 p.hero:nth-of-type(3) {
   border: 5px solid #006d54;
