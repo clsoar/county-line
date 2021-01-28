@@ -10,9 +10,14 @@ dark-green-gray = #424f4d
 off-white = #f5f5f5
 mid-green = #3d8978
 light-green = #83aba2
-
+<a href="https://www.vecteezy.com/free-vector/fiber-optic-cable">Fiber Optic Cable Vectors by Vecteezy</a>
 */
-
+body {
+  background-image: url("../img/High-speed_digital_cable.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+}
 .logo {
   width: 100%;
 }
@@ -20,8 +25,8 @@ light-green = #83aba2
   display: none;
 }
 .law-logo {
-  width: 20%;
-  max-width: 100px;
+  width: 40%;
+  max-width: 200px;
 }
 .collab-container {
   display: flex;
@@ -81,19 +86,14 @@ p.hero:nth-of-type(2) {
   font-weight: bold;
   text-align: center;
   padding-bottom: 2%;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 ul.features {
   padding-left: 0;
-  color: #f4f4f4;
-  text-shadow: 2px 0 2px black, 0 2px 2px black, -2px 0 2px black, 0 -2px 2px black;
-  background: url(../img/fiber-line.png) #d1d3d3;
-  background-size: cover;
-  max-width: 1000px;
+
 }
 .features li {
-  padding: 2px;
-  /*background-color: #424f4d;
+  background-color: #424f4d;
   border-radius: 10px;
   box-shadow:  -5px -3px 1px #006d54;
   color: #f5f5f5;
@@ -102,7 +102,7 @@ ul.features {
   padding: 2px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;*/
+  margin-top: 10px;
 
 }
 p.hero:nth-of-type(3) {
@@ -324,7 +324,7 @@ dialog p {
 
 @media screen and (min-width: 800px) {
   .logo {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
     text-align: center;
     display: block;
@@ -349,16 +349,16 @@ dialog p {
     padding: 9px 0;
   }
   .logo {
-    width: 30%;
+    width: 37%;
   }
   .header-text {
     display: block;
     text-align: center;
-    width: 33%;
+    width: 30%;
     font-size: 2.3em;
   }
   .collab-container {
-    width: 33%;
+    width: 32%;
     position: relative;
     right: 45px;
   }
