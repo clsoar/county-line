@@ -26,7 +26,7 @@ body {
 }
 .law-logo {
   width: 40%;
-  max-width: 200px;
+  max-width: 150px;
   align-self: center;
 }
 .collab-container {
@@ -37,6 +37,9 @@ body {
 .collab {
   width: 100%;
   margin-bottom: 0;
+  text-align: center;
+  text-shadow: 2px 0 2px white, 0 2px 2px white, -2px 0 2px white, 0 -2px 2px white;
+
 }
 .menu {
   display: flex;
@@ -388,6 +391,8 @@ dialog p {
   }
   .law-logo {
     width: 100%;
+    max-width: 170px;
+
   }
   h1.hero {
     display: none;
