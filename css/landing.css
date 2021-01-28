@@ -27,6 +27,7 @@ body {
 .law-logo {
   width: 40%;
   max-width: 200px;
+  align-self: center;
 }
 .collab-container {
   display: flex;
