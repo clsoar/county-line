@@ -372,26 +372,16 @@ dialog p {
 @media screen and (min-width: 1200px) {
   body {
     font-size: 1.2em;
+    text-align: center;
   }
   .features {
     font-size: 1.4em;
-  }
-  .logo {
-    grid-area: topL;
-  }
-  .collab, .menu, main h1.hero, p.hero, .features-list {
-    grid-area: topR;
-  }
-  .packages {
-    grid-area: mainL;
-  }
-  .install-fee {
-    grid-area: mainR;
   }
 }
 @media screen and (min-width: 1700px) {
   body {
     font-size: 1.4em;
+    text-align: center;
   }
   h1 {
     font-size: 2.4em;
