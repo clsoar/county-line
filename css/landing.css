@@ -13,10 +13,10 @@ light-green = #83aba2
 <a href="https://www.vecteezy.com/free-vector/fiber-optic-cable">Fiber Optic Cable Vectors by Vecteezy</a>
 */
 body {
-  background-image: url("../img/High-speed_digital_cable.jpg");
+  background-image: url("../img/High-speed_digital_cable_vert.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
 }
 .logo {
   width: 100%;
@@ -71,7 +71,12 @@ h1.hero {
   margin-left: auto;
   margin-right: auto;
 }
-
+p.hero:nth-of-type(1) {
+  background-color: #f4f4f4;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 650px;
+}
 p.hero:nth-of-type(2) {
   color: #040404;
   border: .2em solid #bdc3c5;
@@ -146,10 +151,13 @@ h2 {
   text-align: center;
   padding: 2px 5px;
   margin-top: 10%;
+  background-color: #f4f4f4;
 }
 h3 {
   text-align: center;
   padding: 0 5px;
+  background-color: #f4f4f4;
+
 }
 .form-art {
   text-align: left;
@@ -159,6 +167,12 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
+}
+.form-art h1 {
+  text-shadow: 2px 0 2px white, 0 2px 2px white, -2px 0 2px white, 0 -2px 2px white;
+}
+.radio-toolbar legend, .radio-toolbar p {
+  background-color: #f4f4f4;
 }
 .radio-toolbar {
   margin-bottom: 10px;
@@ -196,27 +210,36 @@ h3 {
   margin: 2px;
   background-color: #f5f5f5;
 }
-
+.form-input label {
+  background-color: #f5f5f5;
+}
 input.name {
   background-color: #fff;
   color: #fff;
   border-style: none;
   font-size: .1px !important;
+  height: 0;
 }
 
 .location {
   display: block;
   width: 100%;
 }
+
 .location label, .location input {
   display: flex;
   flex-wrap: wrap;
+  background-color: #f5f5f5;
 }
 .location input {
   background-color: #f5f5f5;
 }
 .location p {
   overflow-wrap: anywhere;
+  background-color: #f5f5f5;
+}
+.location fieldset legend {
+  background-color: #f5f5f5;
 }
 textarea {
   font-family: "Roboto", Verdana, Arial, sans-serif;
@@ -373,6 +396,7 @@ dialog p {
   body {
     font-size: 1.2em;
     text-align: center;
+    background-image: url("../img/High-speed_digital_cable.jpg");
   }
   .features {
     font-size: 1.4em;
