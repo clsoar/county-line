@@ -13,10 +13,10 @@ light-green = #83aba2
 <a href="https://www.vecteezy.com/free-vector/fiber-optic-cable">Fiber Optic Cable Vectors by Vecteezy</a>
 */
 body {
-  background-image: url("../img/High-speed_digital_cable_vert.jpg");
+  background-image: url("../img/lined-background_vert.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 .logo {
   width: 100%;
@@ -391,7 +391,7 @@ dialog p {
   body {
     font-size: 1.2em;
     text-align: center;
-    background-image: url("../img/High-speed_digital_cable.jpg");
+    background-image: url("../img/lined-background.jpg");
   }
   .features {
     font-size: 1.4em;
