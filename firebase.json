@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": "county-line",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "remoteconfig": {
+    "template": "remoteconfig.template.json"
+  }
+}
