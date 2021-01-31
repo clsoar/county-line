@@ -1,4 +1,4 @@
-//https://script.google.com/macros/s/AKfycbwRSCpXWL9Id8ihsyBDU5xQQQAVmAW9pZ5G-gy-8iXYsiOXh2hV/exec
+//sheets submission
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwz37W3f4mNtO0ZIegUfQ64-u7GGzjBV1KtNZjrYbYf_IdGRhMA1MRo/exec';
 const form = document.forms['clientForm'];
 const formSubmitBtn = document.querySelector("#submit-form");
@@ -9,7 +9,6 @@ const extra2 = document.querySelector("#name");
 const extra3 = document.querySelector("#password");
 
 if(formSubmitBtn) {
-
   //hide honeypot
   extra.style.display = "none";
   extra2.setAttribute('tabindex', "-1");
@@ -25,13 +24,10 @@ if(formSubmitBtn) {
           })
           .catch(error => console.error('Error!', error.message));
       //clears form and goes to thank you page
-
         form.reset();
         return false;
             }
         })
-
-
     }
   }
 //for dialog
@@ -43,13 +39,11 @@ const transferLocation = (marker) => {
   var droppedLong = marker.getPosition().lng();
   console.log(droppedLat, droppedLong);
   newLat.value = droppedLat;
-  newLong.value = droppedLong;
-}
+  newLong.value = droppedLong;}
 
 //for map
-const yeksOne = "AIzaSyCnWKdGq2iKrYT";
-const yeksTwo = "atd3QqciKceSiyKpU294";
-
+const yeksOne = "AIzaSyCnWKdGq2iKrYTa";
+const yeksTwo = "td3QqciKceSiyKpU294";
 const reCenterMap = () => {
   var geocoder1 = new google.maps.Geocoder();
   setCenter(geocoder1);
@@ -59,7 +53,6 @@ const makeMap = () => {
       var script = document.createElement('script');
       script.src = 'https://maps.googleapis.com/maps/api/js?key=' + yeksOne + yeksTwo+ '&libraries=geometry,places' + '&callback=initMap';
       script.defer = true;
-
       // Append the 'script' element to 'head'
       document.head.appendChild(script);
       locationBtn.removeEventListener('click', console.log('done'));
@@ -70,22 +63,10 @@ if(locationBtn){
   locationBtn.addEventListener('click', makeMap, {once: true});
 }
 
-
-
-
-
-
-//script element create
-//var script = document.createElement('script');
-//script.src = 'https://maps.googleapis.com/maps/api/js?key=' + yeksOne + yeksTwo+ '&libraries=geometry,places' + '&callback=initMap';
-//script.defer = true;
 //get lat long from Address
-
-
 var geocoder, map;
 window.initMap = function() {
  var geocoder1 = new google.maps.Geocoder();
-
  setCenter(geocoder1);
 }
 function setCenter(geocoder) {
@@ -94,7 +75,6 @@ function setCenter(geocoder) {
   let state = document.querySelector('#state').value;
   let zip = document.querySelector('#zip').value;
   let address = (stAdd + ' ' + city + ', ' + state + ' ' + zip);
-
     geocoder.geocode({
         'address': address
     }, function(results, status) {
@@ -103,7 +83,6 @@ function setCenter(geocoder) {
             center: results[0].geometry.location,
             zoom: 18,
             mapTypeId: google.maps.MapTypeId.SATELLITE
-
           });
             var marker = new google.maps.Marker({
                 map: map,
@@ -120,7 +99,6 @@ function setCenter(geocoder) {
               transferLocation(marker);
               return(marker);
             });
-
         }else {
           console.log(status);
         }
